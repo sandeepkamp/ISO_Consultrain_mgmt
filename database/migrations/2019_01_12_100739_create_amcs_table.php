@@ -19,16 +19,16 @@ class CreateAmcsTable extends Migration
             $table->string('purchase_ordr');
             $table->string('project_cost');
             $table->date('start_plnd_dt');
-            $table->date('start_actl_dt');
-            $table->string('period');
-            $table->date('visit1_dt');
-            $table->string('payment_1');
-            $table->date('visit2_dt');
-            $table->string('payment_2');
-            $table->date('visit3_dt');
-            $table->string('payment_3');
-            $table->date('visit4_dt');
-            $table->string('payment_4');
+            $table->date('start_actl_dt')->nullable();
+            $table->string('period')->nullable();;
+            $table->date('visit1_dt')->nullable();;
+            $table->string('payment_1')->nullable();;
+            $table->date('visit2_dt')->nullable();;
+            $table->string('payment_2')->nullable();;
+            $table->date('visit3_dt')->nullable();;
+            $table->string('payment_3')->nullable();;
+            $table->date('visit4_dt')->nullable();;
+            $table->string('payment_4')->nullable();;
             $table->timestamps();
             $table->softDeletes();
 

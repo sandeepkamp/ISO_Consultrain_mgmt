@@ -127,6 +127,18 @@
                         </ul>
                     </li>
                     <!-- <li><a title="Landing Page" href="#" aria-expanded="false"><i class="fa fa-bookmark icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Landing Page</span></a></li> -->
+
+
+                     <li id="removable">
+                        <a class="has-arrow" href="#" aria-expanded="false"><img src="{{asset('img/sidebar/home5.png')}}" alt="" style="padding: 6px;"><span class="mini-click-non">AMC Orders</span></a>
+                        <ul class="submenu-angle" aria-expanded="false">
+                            <!-- <li><a title="ISO Service List" href="{{ route('projectmanagement.index') }}"><img src="{{asset('img/sidebar/show-all-service.png')}}" alt="" style="padding: 8px;"><span class="mini-click-non">Show All Projects</span></a></li> -->
+                            <li><a title="Add New Project" href="{{ route('amcs.complete') }}"><img src="{{asset('img/sidebar/add-new-service.png')}}" alt="" style="padding: 8px;"><span class="mini-click-non">Show AMC Lists</span></a></li>
+
+                              <li><a title="Add New Project" href="{{ route('amcs.show') }}"><img src="{{asset('img/sidebar/add-new-service.png')}}" alt="" style="padding: 8px;"><span class="mini-click-non">Show AMC Orders</span></a></li>
+                            <!-- <li><a title="Add New Project" href="{{ route('projectmanagement.index') }}"><img src="{{asset('img/sidebar/show-all-audit.png')}}" alt="" style="padding: 8px;"><span class="mini-click-non">Project Info</span></a></li> -->
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>

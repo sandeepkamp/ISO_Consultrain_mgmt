@@ -16,17 +16,17 @@ class CreateDocumentationsTable extends Migration
         Schema::create('documentations', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('order_id');
-            $table->date('qm_planned_date');
-            $table->date('qm_actual_date');
+            $table->date('qm_planned_date')->nullable();
+            $table->date('qm_actual_date')->nullable();
             $table->string('qm_comment')->nullable();
-            $table->date('pm_planned_date');
-            $table->date('pm_actual_date');
+            $table->date('pm_planned_date')->nullable();;
+            $table->date('pm_actual_date')->nullable();;
             $table->string('pm_comment')->nullable();
-            $table->date('sop_planned_date');
-            $table->date('sop_actual_date');
-            $table->string('sop_comment');
-            $table->date('formo_planned_date');
-            $table->date('formo_actual_date');
+            $table->date('sop_planned_date')->nullable();;
+            $table->date('sop_actual_date')->nullable();;
+            $table->string('sop_comment')->nullable();;
+            $table->date('formo_planned_date')->nullable();;
+            $table->date('formo_actual_date')->nullable();
             $table->string('formo_comment')->nullable();
             $table->timestamps();
             $table->softDeletes();

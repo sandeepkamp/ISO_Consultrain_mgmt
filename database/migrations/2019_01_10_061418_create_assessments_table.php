@@ -16,11 +16,11 @@ class CreateAssessmentsTable extends Migration
         Schema::create('assessments', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('order_id');
-            $table->date('pre_assmnt_plnd_date');
-            $table->date('pre_assmt_actual_date');
+            $table->date('pre_assmnt_plnd_date')->nullable();;
+            $table->date('pre_assmt_actual_date')->nullable();;
             $table->string('pre_assmt_comment')->nullable();
-            $table->date('final_assmt__plnd_date');
-            $table->date('final_assmt_actual_date');
+            $table->date('final_assmt__plnd_date')->nullable();;
+            $table->date('final_assmt_actual_date')->nullable();;
             $table->string('final_assmt_comment')->nullable();
             $table->timestamps();
             $table->softDeletes();

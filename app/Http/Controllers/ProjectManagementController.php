@@ -30,7 +30,7 @@ class ProjectManagementController extends Controller
 
         $projectmanagements = ProjectManagement::all();
        //dd($projectmanagements);
-        return view('projectmanagement.index', compact('projectmanagements')) ->with('i', (request()->input('page', 1) - 1) * 5);;
+        return view('projectmanagement.index', compact('projectmanagements')) ->with('i', (request()->input('page', 1) - 1) * 5);
 
     }
 
@@ -265,6 +265,13 @@ class ProjectManagementController extends Controller
         $payment = $projectmanagement->payment;
 
         return view('projectmanagement.show', compact('projectmanagement','documentation','implementation','audit','assessment','payment'));
+    }
+
+    public function completeAmc(){
+
+        $projectmanagements = ProjectManagement::where('amc', 'yes')->get();
+       // dd($projectmanagements);
+       return view('amc.index' , compact('projectmanagements')) ->with('i', (request()->input('page', 1) - 1) * 5);;
     }
 
 }

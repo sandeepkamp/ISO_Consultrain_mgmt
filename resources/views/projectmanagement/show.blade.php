@@ -28,7 +28,7 @@
               <input type="text" name="customer_id" class="form-control" value="{{ $projectmanagement->customer->cust_name }}" readonly>
           </div>
       </div>
-  </div><br>
+  <br>
    <br><br><br>
   <div class="panel-group" id="accordion"> <!-- accordion 1 -->
       <div class="panel panel-primary">
@@ -47,62 +47,62 @@
                       <div class ="row">
                           <div class= "col-sm-4">
                               <label for="project_lead">Project Leader:</label>
-                              <input type="text" class="form-control" id="project_lead"  readonly name="project_lead" value="{{ $projectmanagement->project_lead}}">
+                              <input type="text" class="form-control" id="project_lead"  name="project_lead" value="{{ $projectmanagement->project_lead}}">
                            </div>
 
                            <div class= "col-sm-4">
                               <label for="reference">Reference:</label>
-                              <input type="text" class="form-control" id="reference"  readonly name="reference" value="{{ $projectmanagement->reference}}">
+                              <input type="text" class="form-control" id="reference"  name="reference" value="{{ $projectmanagement->reference}}">
                            </div>
                       </div>
                       <div class ="row">
                            <div class= "col-sm-4">
                               <label for="tender_no">Tender No:</label>
-                              <input type="text" class="form-control" id="tender_no"  readonly name="tender_no" value="{{ $projectmanagement->tender_no}}">
+                              <input type="text" class="form-control" id="tender_no"  name="tender_no" value="{{ $projectmanagement->tender_no}}">
                            </div>
 
                            <div class= "col-sm-4">
                               <label for="tender_date">Tender Date:</label>
-                              <input type="date" class="form-control" id="tender_date"  readonly name="tender_date" value="{{ $projectmanagement->tender_date}}">
+                              <input type="date" class="form-control" id="tender_date"  name="tender_date" value="{{ $projectmanagement->tender_date}}">
                            </div>
 
                            <div class= "col-sm-4">
                                <label for="tender_amount">Tender Amount:</label>
-                               <input type="text" class="form-control" id="tender_amount"  readonly  name="tender_amount" value="{{ $projectmanagement->tender_amount}}">
+                               <input type="text" class="form-control" id="tender_amount"  name="tender_amount" value="{{ $projectmanagement->tender_amount}}">
                            </div>
                       </div>
 
                       <div class ="row">
                            <div class= "col-sm-4">
                              <label for="order_no">Order No:</label>
-                             <input type="text" class="form-control" id="order_no"  readonly name="order_no" value="{{ $projectmanagement->order_no}}">
+                             <input type="text" class="form-control" id="order_no" name="order_no" value="{{ $projectmanagement->order_no}}">
                            </div>
 
                            <div class= "col-sm-4">
                               <label for="order_date">Order Date:</label>
-                              <input type="date" class="form-control" id="order_date"  readonly name="order_date"value="{{ $projectmanagement->order_date}}">
+                              <input type="date" class="form-control" id="order_date"   name="order_date"value="{{ $projectmanagement->order_date}}">
                            </div>
 
                           <div class= "col-sm-4">
                                <label for="order_amount">Order Amount:</label>
-                               <input type="text" class="form-control" id="order_amount"  readonly name="order_amount"value="{{ $projectmanagement->order_amount}}">
+                               <input type="text" class="form-control" id="order_amount"   name="order_amount"value="{{ $projectmanagement->order_amount}}">
                           </div>
                       </div>
 
                       <div class ="row">
                           <div class= "col-sm-4">
                              <label for="start_plnd_dt">Start Planned Date:</label>
-                             <input type="date" class="form-control" id="start_plnd_dt"  readonly name="start_plnd_dt" value="{{ $projectmanagement->start_plnd_dt}}">
+                             <input type="date" class="form-control" id="start_plnd_dt"   name="start_plnd_dt" value="{{ $projectmanagement->start_plnd_dt}}">
                          </div>
 
                          <div class= "col-sm-4">
                               <label for="start_actual_dt">Start Actual Date:</label>
-                              <input type="date" class="form-control" id="start_actual_dt"  readonly name="start_actual_dt" value="{{ $projectmanagement->start_actual_dt}}">
+                              <input type="date" class="form-control" id="start_actual_dt" name="start_actual_dt" value="{{ $projectmanagement->start_actual_dt}}">
                           </div>
 
                           <div class= "col-sm-4">
                               <label for="gap_assessment">Gap Assessment Date:</label>
-                              <input type="date" class="form-control" id="gap_assessment"  readonly name="gap_assessment" value="{{ $projectmanagement->gap_assessment}}">
+                              <input type="date" class="form-control" id="gap_assessment" name="gap_assessment" value="{{ $projectmanagement->gap_assessment}}">
                           </div>
                       </div>
                   </div>
@@ -125,24 +125,24 @@
                        <div class ="row">
                          <div class= "col-sm-4">
                              <label for="qm_planned_date">QM Planned Date:</label>
-                             <input type="date" class="form-control"  readonly id="qm_planned_date" name="qm_planned_date"  value="{{ $documentation->qm_planned_date}}">
+                             <input type="date" class="form-control" id="qm_planned_date" name="qm_planned_date"  value="{{ $documentation->qm_planned_date}}">
                          </div>
 
                        <div class= "col-sm-4">
                           <label for="qm_actual_date">QM Actual Date:</label>
-                          <input type="date" class="form-control"  readonly  id="qm_actual_date" name="qm_actual_date" value="{{ $documentation->qm_actual_date}}">
+                          <input type="date" class="form-control"  id="qm_actual_date" name="qm_actual_date" value="{{ $documentation->qm_actual_date}}">
                        </div>
 
                       <div class= "col-sm-4">
                           <label for="qm_comment">QM Comment:</label>
-                          <input type="text" class="form-control"  readonly id="qm_comment" name="qm_comment" value="{{ $documentation->qm_comment}}">
+                          <input type="text" class="form-control" id="qm_comment" name="qm_comment" value="{{ $documentation->qm_comment}}">
                       </div>
                    </div>
 
                    <div class ="row">
                       <div class= "col-sm-4">
                           <label for="pm_planned_date">PM Planned Date:</label>
-                          <input type="date" class="form-control"   readonly id="pm_planned_date" name="pm_planned_date" value="{{ $documentation->pm_planned_date}}">
+                          <input type="date" class="form-control"  id="pm_planned_date" name="pm_planned_date" value="{{ $documentation->pm_planned_date}}">
                       </div>
 
                       <div class= "col-sm-4">

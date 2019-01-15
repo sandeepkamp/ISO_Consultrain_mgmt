@@ -17,13 +17,18 @@ Route::get('/', function () {
 
 
 Route::resource('customer', 'CustomerController');
-Route::resource('products','ProductController');
-Route::resource('agency','AgencyController');
-Route::resource('projectmanagement','ProjectManagementController');
-Route::resource('document','DocumentationController');
-Route::resource('audit','AuditController');
-Route::resource('assessment','AssessmentController');
-Route::resource('payment','PaymentController');
+Route::resource('products', 'ProductController');
+Route::resource('agency', 'AgencyController');
+Route::resource('projectmanagement', 'ProjectManagementController');
+Route::resource('document', 'DocumentationController');
+Route::resource('audit', 'AuditController');
+Route::resource('assessment', 'AssessmentController');
+Route::resource('payment', 'PaymentController');
+//Route::resource('amc', 'AmcController');
+Route::get('amcs/show' , 'ProjectManagementController@completeAmc')->name('amcs.show');
+Route::get('amcs/complete', 'ProjectManagementController@completeAmc')->name('amcs.complete');
+Route::get('projectmanagement/{id}/amc/create', 'ProjectManagementAmcController@create')->name('projectmanagementamc.create');
+Route::post('projectmanagement/{id}/amc/', 'ProjectManagementAmcController@store')->name('projectmanagementamc.store');
 // Route::resource('certifications', 'CertificationBodyController');
 //Route::resource('auditinfo', 'AuditInfoController');
 // Route::resource('auditmanagement', 'AuditManagementController');

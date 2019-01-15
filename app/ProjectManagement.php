@@ -68,4 +68,10 @@ class ProjectManagement extends Model
     {
         return $this->belongsTo(Agency::class, 'agency_id');
     }
+
+    
+    public function amc()
+    {
+        return $this->hasOne(Amc::class, 'order_id');
+    }
 }
