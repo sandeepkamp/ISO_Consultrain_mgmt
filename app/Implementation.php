@@ -10,7 +10,7 @@ class Implementation extends Model
     protected $primaryKey = 'id';
 
     public $fillable = [
-
+        'order_id',
         'traning_planned_date',
         'traning_actual_date',
         'traning_comment',
@@ -19,4 +19,9 @@ class Implementation extends Model
         'implementation_comment',
         
     ];
+    public function projectManagement()
+    {
+        return $this->belongsTo(ProjectManagement::class);
+    }
+    
 }

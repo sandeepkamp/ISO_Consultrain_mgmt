@@ -12,6 +12,7 @@ use App\Payment;
 use DB;
 use App\Product;
 use App\Agency;
+use App\Customer;
 
 
 class ProjectManagementController extends Controller
@@ -40,7 +41,7 @@ class ProjectManagementController extends Controller
      */
     public function create()
     {
-        $customers =DB::table('customers')->select('id','cust_name')->get();
+        $customers = Customer::all();
         $products =DB::table('products')->select('id','name')->get();
         $agencies =DB::table('agencies')->select('id','agency_name')->get();
         return view('projectmanagement.create', compact('customers','products','agencies'));
@@ -84,7 +85,7 @@ class ProjectManagementController extends Controller
      *  documentation table
     */
 
-    private function document($management_id,$data)
+    private function document($management_id, $data)
     {
         $document =  new Documentation();
         $document->order_id = $management_id;
@@ -199,8 +200,7 @@ class ProjectManagementController extends Controller
       
         //dd($internalaudit);
         $payment->save();
-        return redirect()->route('projectmanagement.index')
-            ->with('success','Product created successfully.');
+        return redirect()->route('projectmanagement.index');
     }
 
      /**
@@ -258,13 +258,12 @@ class ProjectManagementController extends Controller
     public function show($id)
     {
         $projectmanagement= ProjectManagement::findOrFail($id);
-       // dd($projectmanagement);
-        $documentation = Documentation::findOrFail($id);
-        $implementation = Implementation::findOrFail($id);
-        $audit = Audit::findOrFail($id);
-        $assessment = Assessment::findOrFail($id);
-        $payment =Payment::findOrFail($id);
-        // dd($cust_id);
+        $documentation = $projectmanagement->documentation;
+        $implementation = $projectmanagement->implementation;
+        $audit = $projectmanagement->audit;
+        $assessment = $projectmanagement->assessment;
+        $payment = $projectmanagement->payment;
+
         return view('projectmanagement.show', compact('projectmanagement','documentation','implementation','audit','assessment','payment'));
     }
 

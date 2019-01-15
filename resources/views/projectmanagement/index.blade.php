@@ -37,7 +37,7 @@
            <td>
                 <form action=" " method="POST">
    
-                     <a class="btn btn-info" href="{{ route('projectmanagement.show',$projectmanagement->id) }}">Show</a>
+                     <a class="btn btn-info" href="{{ route('projectmanagement.show',['id'=> $projectmanagement->id]) }}">Show</a>
 
 
 

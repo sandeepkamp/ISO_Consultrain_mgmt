@@ -18,8 +18,13 @@ class Agency extends Model
     ];
 
 
-    public function project_management()
+    public function projectManagement()
     {
-        return $this->hasMany('App\ProjectManagement','agency_id');
+        return $this->hasOne(ProjectManagement::class, 'agency_id');
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'agency_product_mappings', 'product_id');
     }
 }

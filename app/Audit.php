@@ -11,6 +11,7 @@ class Audit extends Model
     protected $primaryKey = 'id';
     //
     public $fillable = [
+        'order_id',
         'int_audit_plnd_date',
         'int_audit_actual_date',
         'int_audit_comment',
@@ -21,5 +22,10 @@ class Audit extends Model
         'application_actual_dt',
         'application_comment',
     ];
+
+    public function projectManagement()
+    {
+        return $this->belongsTo(ProjectManagement::class);
+    }
 
 }

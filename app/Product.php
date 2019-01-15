@@ -12,9 +12,14 @@ class Product extends Model
      ];
 
 
-     public function project_management()
+     public function projectManagement()
      {
-         return $this->hasMany('App\ProjectManagement','iso_product_id');
+         return $this->hasOne(ProjectManagement::class, 'iso_product_id');
+     }
+
+     public function agencies()
+     {
+         return $this->belongsToMany(Agency::class, 'agency_product_mappings', 'agency_id');
      }
 
 }

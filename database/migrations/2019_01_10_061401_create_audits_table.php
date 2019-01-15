@@ -24,7 +24,7 @@ class CreateAuditsTable extends Migration
             $table->string('adequacy_audit_comment')->nullable();
             $table->date('application_plnd_dt');
             $table->date('application_actual_dt');
-            $table->date('application_comment');
+            $table->string('application_comment')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

@@ -15,7 +15,7 @@ class CreateAmcsTable extends Migration
     {
         Schema::create('amcs', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('customer_id');
+            $table->integer('order_id')->unsigned();
             $table->string('purchase_ordr');
             $table->string('project_cost');
             $table->date('start_plnd_dt');
@@ -32,7 +32,7 @@ class CreateAmcsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('customer_id')->references('id')->on('project_managements');
+            $table->foreign('order_id')->references('id')->on('project_managements');
         });
     }
 

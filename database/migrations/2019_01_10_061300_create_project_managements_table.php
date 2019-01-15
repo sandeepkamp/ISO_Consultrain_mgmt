@@ -29,6 +29,7 @@ class CreateProjectManagementsTable extends Migration
             $table->date('start_plnd_dt');
             $table->date('start_actual_dt');
             $table->date('gap_assessment');
+            $table->string('amc')->default('no');
             $table->timestamps();
             $table->softDeletes();
 

@@ -26,8 +26,8 @@ class Documentation extends Model
            
     ];
 
-    public function documentations()
+    public function projectManagement()
     {
-      return $this->belongsTo('App\ProcessManagement','order_id');
+        return $this->belongsTo(ProjectManagement::class);
     }
 }

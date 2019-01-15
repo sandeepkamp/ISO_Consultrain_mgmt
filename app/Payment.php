@@ -10,7 +10,7 @@ class Payment extends Model
     protected $primaryKey = 'id';
 
     public $fillable = [
-
+        'order_id',
         'adv_plnd_dt',
         'adv_act_dt',
         'adv_remark',
@@ -27,4 +27,9 @@ class Payment extends Model
         'final_pay_act_dt',
         'final_pay_remark',
     ];
+
+    public function projectManagement()
+    {
+        return $this->belongsTo(ProjectManagement::class);
+    }
 }

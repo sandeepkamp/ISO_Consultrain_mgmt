@@ -10,7 +10,7 @@ class Assessment extends Model
     protected $primaryKey = 'id';
 
     public $fillable = [
-          
+        'order_id',
         'pre_assmnt_plnd_date',
         'pre_assmt_actual_date',
         'pre_assmt_comment',
@@ -18,4 +18,9 @@ class Assessment extends Model
         'final_assmt_actual_date',
         'final_assmt_comment',
     ];
+
+    public function projectManagement()
+    {
+        return $this->belongsTo(ProjectManagement::class);
+    }
 }
